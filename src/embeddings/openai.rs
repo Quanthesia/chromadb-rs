@@ -105,14 +105,14 @@ mod tests {
             .unwrap();
         let openai_embeddings = OpenAIEmbeddings::new(Default::default());
 
-        let docs = vec![
+        let docs = &[
             "Once upon a time there was a frog",
             "Once upon a time there was a cow",
             "Once upon a time there was a wolverine",
         ];
 
         let collection_entries = CollectionEntries {
-            ids: vec!["test1", "test2", "test3"],
+            ids: &["test1", "test2", "test3"],
             metadatas: None,
             documents: Some(docs),
             embeddings: None,
